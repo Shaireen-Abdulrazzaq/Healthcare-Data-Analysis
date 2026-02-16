@@ -46,47 +46,11 @@ This project analyzes hospital operations data to identify billing trends, admis
 
 ---
 
+
 ⌗ Technical Implementation
+SQL: Data cleaning with ALTER TABLE MODIFY, ROW_NUMBER() for duplicates. Built CTEs to calculate hospital averages, then compared individual patient stays using JOINs and DATEDIFF(). Ranked high-billing patients by condition using RANK() OVER(), aggregated by medical condition and admission type.
 
-SQL Approach
-
-Data Cleaning & Standardization
-
-Modified data types using ALTER TABLE MODIFY to enforce DATE, INT, DECIMAL types for accurate calculations
-Capitalized patient names using CONCAT(), UPPER(), LEFT(), and SUBSTRING() for consistency
-Replaced formatting inconsistencies (e.g., hyphens in hospital names) using REPLACE()
-Rounded billing amounts to whole numbers using ROUND() for cleaner reporting
-Removed duplicate patient records using ROW_NUMBER() OVER (PARTITION BY name, date_of_admission) to identify duplicates based on patient name and admission date
-
-
-Patient Stay Analysis (Advanced)
-
-Built a CTE (WITH hospital_avg AS) to calculate each hospital's average length of stay using AVG(DATEDIFF())
-Joined individual patient records back to hospital averages to compare each patient's stay duration against their hospital's baseline
-Calculated the difference from average for each patient to identify operational outliers and inefficiencies
-Query used: Window function context with JOIN to surface patients with significantly longer stays
-
-
-Billing & Diagnosis Analysis
-
-Aggregated billing by medical condition and admission type using GROUP BY on two dimensions
-Ranked highest-billing patients within each medical condition using RANK() OVER (PARTITION BY medical_condition ORDER BY billing_amount DESC)
-Identified hospitals with above-average abnormal test results using nested CTEs to calculate baselines and compare
-Queries returned top conditions, top revenue combinations, and quality/safety outliers
-
-
-
-Power BI Implementation
-
-Data Connection: Loaded cleaned SQL query results into Power BI as a fact table
-Slicers: Added dynamic filters for Blood Type and Gender to allow stakeholders to drill down by demographics
-KPIs: Displayed total billing, average stay, patient count, and doctor count as executive summary metrics
-Visualizations:
-
-Line chart for seasonal billing trends by medical condition
-Scatter plot with trend line for length-of-stay vs. revenue correlation
-Donut chart for admission type distribution
-Bar chart for top medical conditions by patient count
+Power BI: Loaded cleaned SQL results as fact table. Added slicers (Blood Type, Gender) for drill-down. Displayed KPIs (total billing, avg stay, patient count, doctor count). Built line chart (billing trends), scatter plot (stay vs. revenue), donut chart (admission types), bar chart (top conditions).
 ---
 
 ## 📊 Dashboard Features
