@@ -4,7 +4,7 @@ End-to-end healthcare data analysis using SQL and Power BI including data cleani
 
 # Hospital Executive Summary | Power BI + SQL Project
 
-![Dashboard Screenshot](YOUR_IMAGE_FILENAME.png)
+![Dashboard Screenshot](Hospital Executive Dashboard.png)
 
 ## ✦ Project Overview
 This project analyzes hospital operations data to identify billing trends, admission patterns, and diagnosis distribution. The goal was to transform raw admission records into an executive-level dashboard for operational decision-making.
