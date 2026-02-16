@@ -14,12 +14,12 @@ This project analyzes hospital operations data to identify billing trends, admis
 ## ❖ Deep Dive: Key Insights
 
 ### 1. Operational Efficiency (Length of Stay Analysis)
-![Scatter Plot](scatter.png)
+![Scatter Plot](assets/scatter.png)
 * **The Discovery:** This scatter plot reveals a major inefficiency. The trend line is nearly flat, meaning **longer patient stays do not result in significantly higher revenue.**
 * **Business Impact:** Patients staying 20+ days (the outliers at the top) are occupying beds without generating proportional value. A review of discharge procedures for these specific cases could improve bed turnover rates.
 
 ### 2. Financial Stability (Payer Mix)
-![Insurance Donut](donut.png)
+![Insurance Donut](assets/donut.png)
 * **The Discovery:** Unlike many hospitals that rely heavily on one insurer, our patient base is perfectly balanced between Cigna, Medicare, UnitedHealthcare, and Blue Cross.
 * **Business Impact:** This **low concentration risk** means the hospital is financially stable even if one provider changes their reimbursement policies.
 
