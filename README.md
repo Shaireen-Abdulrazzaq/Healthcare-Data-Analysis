@@ -1,37 +1,32 @@
-# ✚ Healthcare-Data-Analysis
-End-to-end healthcare data analysis using SQL and Power BI including data cleaning, business analysis, and executive dashboard.
-
-
-# Hospital Executive Summary | Power BI + SQL Project
+# ✚ Hospital Executive Summary
 
 ![Dashboard Screenshot](Hospital%20Executive%20Dashboard.png)
 
 ## ✦ Project Overview
 This project analyzes hospital operations data to identify billing trends, admission patterns, and diagnosis distribution. The goal was to transform raw admission records into an executive-level dashboard for operational decision-making.
 
-## ❖ Key Insights & Business Impact
-
-**1. Revenue is driven by chronic conditions**
-* **Observation:** Arthritis, Diabetes, Hypertension, and Cancer dominate patient volume.
-* **Business Impact:** These long-term conditions create recurring admissions and stable billing streams, suggesting revenue planning should align with chronic disease management programs.
-
-**2. Elective admissions lead patient volume**
-* **Observation:** Elective procedures represent the largest share of admissions compared to Emergency or Urgent care.
-* **Business Impact:** Revenue forecasting is predictable as scheduled admissions are a core financial driver.
-
-**3. Billing is evenly distributed across genders**
-* **Observation:** Average billing is nearly identical (Male: $25,633 vs. Female: $25,483).
-* **Business Impact:** Cost patterns are purely condition-driven rather than demographic-driven, allowing for simplified financial modeling.
-
-**4. Length of Stay (LOS) varies significantly**
-* **Observation:** Analysis reveals high variance, with some patients exceeding hospital averages by +7 days while others are discharged -8 days early.
-* **Business Impact:** High deviation impacts bed utilization and revenue optimization. A review of discharge processes for outliers could improve operational efficiency.
-
 ## ✳ Tools Used
-* **SQL (MySQL):** Data cleaning, CTEs for performance comparison, window functions for duplicate removal.
-* **Power BI:** Data modeling, DAX measures, and interactive dashboard design.
+![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![MySQL](https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+---
+
+## ❖ Deep Dive: Key Insights
+
+### 1. Operational Efficiency (Length of Stay Analysis)
+![Scatter Plot](scatter.png)
+* **The Discovery:** This scatter plot reveals a major inefficiency. The trend line is nearly flat, meaning **longer patient stays do not result in significantly higher revenue.**
+* **Business Impact:** Patients staying 20+ days (the outliers at the top) are occupying beds without generating proportional value. A review of discharge procedures for these specific cases could improve bed turnover rates.
+
+### 2. Financial Stability (Payer Mix)
+![Insurance Donut](donut.png)
+* **The Discovery:** Unlike many hospitals that rely heavily on one insurer, our patient base is perfectly balanced between Cigna, Medicare, UnitedHealthcare, and Blue Cross.
+* **Business Impact:** This **low concentration risk** means the hospital is financially stable even if one provider changes their reimbursement policies.
+
+---
 
 ## ⌗ Technical Implementation
-1.  **Data Cleaning:** Standardized text fields, removed duplicates using `ROW_NUMBER()`, and enforced data types.
-2.  **Analysis:** Used SQL CTEs to compare individual patient stay duration against hospital averages to find the LOS outliers mentioned above.
+
+1.  **Data Cleaning:** Standardized text fields, removed duplicates using `ROW_NUMBER()`, and enforced data types in SQL.
+2.  **Analysis:** Used SQL CTEs to compare individual patient stay duration against hospital averages to find the LOS outliers.
 3.  **Visualization:** Built a focused executive dashboard with slicers for Blood Type and Gender to allow dynamic filtering.
