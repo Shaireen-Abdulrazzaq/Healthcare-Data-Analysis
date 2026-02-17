@@ -17,7 +17,7 @@ This project analyzes hospital operations data to identify billing trends, admis
 
 ### 1. Operational Efficiency (Length of Stay Analysis)
 
-![Scatter Plot](assets/scatter.png)
+<img src="assets/scatter.png" width="500">
 
 **The Discovery:** This scatter plot reveals a major inefficiency. The trend line is nearly flat, meaning **longer patient stays do not result in significantly higher revenue.**
 
@@ -33,7 +33,7 @@ This project analyzes hospital operations data to identify billing trends, admis
 
 ### 2. Financial Stability (Payer Mix)
 
-![Donut Chart](assets/donut.png)
+<img src="assets/donut.png" width="400">
 
 **The Discovery:** Unlike many hospitals that rely heavily on one insurer, our patient base is perfectly balanced between Cigna, Medicare, UnitedHealthcare, and Blue Cross.
 
