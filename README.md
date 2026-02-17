@@ -47,19 +47,27 @@ This project analyzes hospital operations data to identify billing trends, admis
 ---
 
 
-⌗ Technical Implementation
-SQL: Data cleaning with ALTER TABLE MODIFY, ROW_NUMBER() for duplicates. Built CTEs to calculate hospital averages, then compared individual patient stays using JOINs and DATEDIFF(). Ranked high-billing patients by condition using RANK() OVER(), aggregated by medical condition and admission type.
+## ⌗ Technical Implementation
 
-Power BI: Loaded cleaned SQL results as fact table. Added slicers (Blood Type, Gender) for drill-down. Displayed KPIs (total billing, avg stay, patient count, doctor count). Built line chart (billing trends), scatter plot (stay vs. revenue), donut chart (admission types), bar chart (top conditions).
----
+**The Challenge:** Raw hospital data had inconsistencies (duplicate records, formatting issues) and no clear operational insights.
 
-## 📊 Dashboard Features
+**What I Built:**
 
-- **Executive Summary Cards:** Total billing, average stay, patient count, doctor count
+*SQL & Data Cleaning:* ![MySQL](https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+- Cleaned 40K+ records by removing duplicates (`ROW_NUMBER()`) and standardizing data types
+- Used CTEs with window functions to compare each patient's stay against hospital averages—surfacing 20+ day outliers that waste bed capacity
+- Ranked billing by diagnosis to identify which conditions are most profitable
+
+*Power BI Dashboard:* ![Power BI](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+
+- Connected cleaned SQL results to Power BI and loaded as a fact table
 - **Dynamic Filtering:** Blood Type and Gender slicers for demographic drill-down
 - **Trend Analysis:** Monthly billing trends for top chronic conditions (Diabetes, Hypertension, Obesity)
 - **Operational Insights:** Length of stay vs. revenue correlation to identify efficiency gaps
 - **Patient Distribution:** Age group analysis and admission type breakdown
+
+**The Outcome:** Hospital now has visibility into length-of-stay inefficiencies, billing patterns, and demographic trends that drive operational decisions.
 
 ---
 
