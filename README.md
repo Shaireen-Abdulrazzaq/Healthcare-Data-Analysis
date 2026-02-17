@@ -99,15 +99,6 @@ This project analyzes hospital operations data to identify billing trends, admis
 
 ---
 
-## 📝 How to Use
-
-1. **View the Dashboard:** Open `Hospital_Executive_Dashboard.pbix` in Power BI Desktop
-2. **Review the SQL:** Check `Healthcare-Data-Analysis.sql` for all queries and transformations
-3. **Understand the Data:** See `healthcare_dataset.csv` for raw data structure
-4. **Read the Insights:** Review key findings above for business context
-
----
-
 ## License
 
 MIT License - See LICENSE file for details
