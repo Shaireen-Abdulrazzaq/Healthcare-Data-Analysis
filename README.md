@@ -53,13 +53,13 @@ This project analyzes hospital operations data to identify billing trends, admis
 
 **What I Built:**
 
-*SQL & Data Cleaning:* ![MySQL](https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+*SQL & Data Cleaning:* ![MySQL](https://img.shields.io/badge/mysql-4479A1?style=plastic&logo=mysql&logoColor=white)
 
 - Cleaned 40K+ records by removing duplicates (`ROW_NUMBER()`) and standardizing data types
 - Used CTEs with window functions to compare each patient's stay against hospital averages—surfacing 20+ day outliers that waste bed capacity
 - Ranked billing by diagnosis to identify which conditions are most profitable
 
-*Power BI Dashboard:* ![Power BI](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+*Power BI Dashboard:* ![Power BI](https://img.shields.io/badge/power_bi-F2C811?style=plastic&logo=powerbi&logoColor=black)
 
 - Connected cleaned SQL results to Power BI and loaded as a fact table
 - **Dynamic Filtering:** Blood Type and Gender slicers for demographic drill-down
